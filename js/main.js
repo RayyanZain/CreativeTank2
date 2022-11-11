@@ -39,6 +39,7 @@
         $('#header').addClass('header-scrolled');
     }
 
+    
     // Smooth scroll for the navigation and links with .scrollto classes
     $('.main-nav a, .mobile-nav a, .scrollto').on('click', function() {
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -118,5 +119,15 @@
         loop: true,
         items: 1
     });
+
+    
+  // Clients carousel (uses the Owl Carousel library)
+  $(".clients-carousel").owlCarousel({
+    autoplay: true,
+    dots: true,
+    loop: true,
+    responsive: { 0: { items: 2 }, 768: { items: 6 }, 900: { items: 6 }
+    }
+  });
 
 })(jQuery);
